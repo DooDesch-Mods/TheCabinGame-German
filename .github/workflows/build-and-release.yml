@@ -1,0 +1,114 @@
+name: Build and release on tag
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.notes.outputs.version }}
+      notes_bbcode: ${{ steps.notes.outputs.notes_bbcode }}
+      notes_plain: ${{ steps.notes.outputs.notes_plain }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install Lua check dependency
+        run: python -m pip install -r requirements-dev.txt
+      - name: Check Lua and translations
+        run: python tests/check_lua.py
+      - name: Check release failure handling
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Validate tag and default branch
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin "$DEFAULT_BRANCH:refs/remotes/origin/$DEFAULT_BRANCH"
+          git merge-base --is-ancestor HEAD "refs/remotes/origin/$DEFAULT_BRANCH"
+          python tools/release_notes.py "$GITHUB_REF_NAME"
+      - name: Package verified runtime
+        run: python tools/package.py
+      - name: Prepare release outputs
+        id: notes
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: python
+        run: |
+          import json, os, uuid
+          from pathlib import Path
+          version = json.loads(Path('package.json').read_bytes())['version']
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as stream:
+              stream.write(f'version={version}\n')
+              for key, suffix in [('notes_bbcode', 'bbcode'), ('notes_plain', 'txt')]:
+                  delimiter = 'NOTES_' + uuid.uuid4().hex
+                  body = Path(f'dist/release-notes.{suffix}').read_text(encoding='utf-8')
+                  stream.write(f'{key}<<{delimiter}\n{body}\n{delimiter}\n')
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CabinGerman-release
+          path: dist/*
+
+  github:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: CabinGerman-release
+      - name: Verify downloaded package checksums
+        run: sha256sum -c *.sha256
+      - uses: softprops/action-gh-release@v2
+        with:
+          body_path: release-notes.md
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: |
+            CabinGerman-*.zip
+            CabinGerman-*.sha256
+            CabinGerman_*_nexus.zip
+            CabinGerman_*_nexus.sha256
+
+  nexus:
+    needs: [build, github]
+    if: startsWith(github.ref, 'refs/tags/') && github.run_attempt == 1 && vars.NEXUS_FILE_GROUP_ID != '' && vars.NEXUS_MOD_ID != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: CabinGerman-release
+      - name: Verify Nexus package checksum
+        run: sha256sum -c CabinGerman_*_nexus.sha256
+      - name: Update Nexus file
+        uses: Nexus-Mods/upload-action@v1.0.0-beta.10
+        with:
+          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
+          file_id: ${{ vars.NEXUS_FILE_GROUP_ID }}
+          mod_id: ${{ vars.NEXUS_MOD_ID }}
+          filename: CabinGerman_${{ needs.build.outputs.version }}_nexus.zip
+          version: ${{ needs.build.outputs.version }}
+          display_name: CabinGerman ${{ needs.build.outputs.version }}
+          description: ${{ needs.build.outputs.notes_bbcode }}
+          changelog: ${{ needs.build.outputs.notes_plain }}
+          category: main
+          archive_existing_version: true
+          update_mod_version: true
+          primary_mod_manager_download: false
+          allow_mod_manager_download: false

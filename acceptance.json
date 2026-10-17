@@ -1,0 +1,65 @@
+{
+  "version": "0.2.0",
+  "game_build": "25553694",
+  "runtime_sha256": {
+    "Content/Paks/~mods/CabinGermanVoice_P.pak": "5c19b2f1b3d2fa128b13e0359821c9edd458095b99d174447bc950b28872951e",
+    "Content/Paks/~mods/CabinGermanVoice_P.ucas": "44315695ea495a6f1d96fff2fbfe4e9a362f6fa9263a5013d74f9e48f4607688",
+    "Content/Paks/~mods/CabinGermanVoice_P.utoc": "92fb8d0024234f59657c3e110c542f1c9515ac097fedef53efc5af2b5c603e6e",
+    "Mods/CabinGerman/enabled.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Mods/CabinGerman/mod-info.ini": "63127901228cc7f0cfb26359d5058a401ae3d1e35c993ff2b20d755040d382ec",
+    "Mods/CabinGerman/Scripts/de.lua": "90a5e9d4bd924d3a3df52416f01354600b7606d18151e8c482698891c1a3d26b",
+    "Mods/CabinGerman/Scripts/fonts.lua": "f201623ce971b20fbafe3a4340ea4cd45e7f7c220b393f6e1d6e05af3e7c0270",
+    "Mods/CabinGerman/Scripts/main.lua": "60ff9a8ff62df9766d30893121be3749f9f2b202ee88a80dab2443390aeddd6f",
+    "Mods/CabinGerman/Scripts/radio.lua": "f67112a9b1d02aba3e62421101058db620994e20c104ba598d6ee7f9729237ca",
+    "Mods/CabinGerman/Scripts/translate.lua": "dbed42520e1006289da361bcbe2bbbcba95f40fa075b84b22db2f9583398bd82",
+    "Mods/CabinGerman/Scripts/widgets.lua": "79d02fd7bc88d50c5eaf723f121e7cb99c61acff47615b1de6872a868262063d"
+  },
+  "scope": "Previously accepted original menu/settings/ten journal pages; actual original intro SoundCue loading/playback/end, caption text/show/hide in original HUD; visual caption preview on menu canvas",
+  "ui_runtime_accepted": true,
+  "full_gameplay_accepted": false,
+  "radio_subtitle_playback_accepted": true,
+  "views": {
+    "settings": {
+      "evidence": "Workspace\\evidence\\german\\line-fit-views\\settings.json",
+      "png": "analysis\\runtime\\german-translation137\\cabin-menu-window-3aba355b264a4f9b930c0bd7de88d9f9.png",
+      "sha256": "d8bf6f0995a93140b8b15b91180d5e76bccbd8dbc672ff63c26b4bef17ce0511"
+    },
+    "howto": {
+      "evidence": "Workspace\\evidence\\german\\line-fit-views\\howto.json",
+      "png": "analysis\\runtime\\german-translation137\\cabin-menu-window-42f7ed17eada4d8cb5a4b0bbcce58bf8.png",
+      "sha256": "22cf124b145f5c551745723f07c33cc820f4ee0189d9101ce114725613f9ee6f"
+    },
+    "clues": {
+      "evidence": "Workspace\\evidence\\german\\line-fit-views\\clues.json",
+      "png": "analysis\\runtime\\german-translation137\\cabin-menu-window-bc84374c199b4152b1f3bfd86f994ff9.png",
+      "sha256": "63b9d7209d28666a84e4b1b13b534dbdaf0df85d99d7e40183b498b08e27cccb"
+    },
+    "types": {
+      "evidence": "Workspace\\evidence\\german\\line-fit-views\\types.json",
+      "png": "analysis\\runtime\\german-translation137\\cabin-menu-window-a3701f00d2f945199903195e4d2da420.png",
+      "sha256": "3f2db8f1e8887acb47f7d834ad73bb1e98e188b5919b3bfeccfd6206b494446c"
+    },
+    "stealth": {
+      "evidence": "Workspace\\evidence\\german\\final-views\\stealth.json",
+      "png": "analysis\\runtime\\german-translation137\\cabin-menu-window-c703e151ed704a74ba95002ea2f9d59a.png",
+      "sha256": "db4d8295bb8bca237d9ad70035004695a281b4d38ef1bb14f244284e339534ac"
+    },
+    "manual": {
+      "evidence": "Workspace\\evidence\\german\\final-views\\manual.json",
+      "png": "analysis\\runtime\\german-translation137\\cabin-menu-window-0003e4d2d9fe4bb08f9ee4e6e8335d70.png",
+      "sha256": "29eb8efd6e7f5ce88dcb0b9554e62a0797127bbcd56a8d53ff68c67ccacafd91"
+    }
+  },
+  "voice_poc_included": false,
+  "note": "Full multiplayer round and actual gameplay-HUD layout remain unmeasured. The original gameplay HUD has zero layout size in the menu-only test, so visual font/position acceptance uses the same caption on the menu canvas. New German audio only; no original voice or encoder is shipped.",
+  "audio_runtime_accepted": true,
+  "radio_gameplay_layout_accepted": false,
+  "german_voice_included": true,
+  "audio_evidence": "Workspace/evidence/german/release-0.2.0",
+  "companion_pak_metadata": {
+    "tested_sha256": "75e7144577253917f6da7312ef5e585b12fb728226a22b0938323751a6b555cd",
+    "release_sha256": "5c19b2f1b3d2fa128b13e0359821c9edd458095b99d174447bc950b28872951e",
+    "change": "Unique path-hash seed only; same V11 format, ../../../ mount and zero entries; audio UTOC/UCAS unchanged",
+    "readback_verified": true
+  }
+}

@@ -1,0 +1,24 @@
+Seid gegrüßt, Spieler.
+
+Inzwischen habt ihr sicher bemerkt, dass ihr in dieser Hütte gefangen seid.
+Und der einzige Ausweg führt über ein Spiel.
+Ein Kartenspiel.
+
+Das Ziel des Spiels ist einfach:
+Findet heraus, in welchem Raum sich der Ausgang befindet.
+
+In dieser Hütte sind drei Hinweise versteckt, die ihr finden müsst.
+Deckt sie auf, bevor das Spiel endet.
+Denn sobald eure Spielfigur die Zwölf erreicht,
+müsst ihr in diesem Raum sein, um zu gewinnen.
+
+Doch eine weitere Spielfigur ist euch auf den Fersen.
+Sie gehört dem Besucher.
+
+Lasst seine Spielfigur eure nicht einholen.
+Sonst heißt es: Game Over.
+
+Viel Glück.
+Und, Spieler ...
+willkommen bei ...
+The Cabin Game.
