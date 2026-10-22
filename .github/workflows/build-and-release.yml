@@ -110,5 +110,5 @@ jobs:
           category: main
           archive_existing_version: true
           update_mod_version: true
-          primary_mod_manager_download: false
-          allow_mod_manager_download: false
+          primary_mod_manager_download: ${{ vars.NEXUS_VORTEX_READY == 'true' }}
+          allow_mod_manager_download: ${{ vars.NEXUS_VORTEX_READY == 'true' }}
