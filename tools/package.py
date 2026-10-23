@@ -1,4 +1,5 @@
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import zipfile
@@ -6,15 +7,22 @@ import zipfile
 ROOT=Path(__file__).resolve().parents[1]
 metadata=json.loads((ROOT/'package.json').read_bytes())
 acceptance=json.loads((ROOT/'acceptance.json').read_bytes())
-assert metadata['version']==acceptance['version'],'version changed since runtime verification'
+parser=argparse.ArgumentParser()
+parser.add_argument('--candidate',action='store_true',help='build a local candidate without claiming runtime acceptance')
+args=parser.parse_args()
+version=metadata['version']+('-candidate' if args.candidate else '')
 files=sorted(p for folder in ['Mods','Content'] for p in (ROOT/folder).rglob('*') if p.is_file())
 bindings={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
-assert acceptance['runtime_sha256']==bindings,'runtime changed since recorded verification'
-assert acceptance['ui_runtime_accepted'] and acceptance['audio_runtime_accepted'] and acceptance['radio_subtitle_playback_accepted'],'required release acceptance incomplete'
-manifest={'mod':metadata['mod'],'version':metadata['version'],'game_build':metadata['game_build'],'ue4ss':metadata['ue4ss'],'files':bindings,'acceptance_scope':acceptance['scope'],'full_gameplay_acceptance':False,'audio_runtime_accepted':True}
+if not args.candidate:
+    assert metadata['version']==acceptance['version'],'version changed since runtime verification'
+    assert acceptance['runtime_sha256']==bindings,'runtime changed since recorded verification'
+    assert acceptance['ui_runtime_accepted'] and acceptance['audio_runtime_accepted'] and acceptance['radio_subtitle_playback_accepted'],'required release acceptance incomplete'
+manifest={'mod':metadata['mod'],'version':version,'game_build':metadata['game_build'],'ue4ss':metadata['ue4ss'],'files':bindings,
+          'acceptance_scope':'Local candidate; game verification pending' if args.candidate else acceptance['scope'],
+          'full_gameplay_acceptance':False,'ui_runtime_accepted':not args.candidate,'audio_runtime_accepted':not args.candidate}
 dist=ROOT/'dist'
 dist.mkdir(exist_ok=True)
-target=dist/(metadata['mod']+'-'+metadata['version']+'.zip')
+target=dist/(metadata['mod']+'-'+version+'.zip')
 with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as archive:
     documents=['README.md','LICENSE.md','CHANGELOG.md','translations.de.json','CREDITS.md','INTRO.de.txt']
     for path in files+[ROOT/name for name in documents]:
@@ -31,7 +39,7 @@ target.with_suffix('.sha256').write_text(digest+'  '+target.name+'\n',encoding='
 print(f'confirmed ZIP: {target}; entries={len(files)+len(documents)+1}; sha256={digest}')
 
 # Nexus uses game-root destinations and excludes the editable source documents.
-nexus=dist/f"{metadata['mod']}_{metadata['version']}_nexus.zip"
+nexus=dist/f"{metadata['mod']}_{version}_nexus.zip"
 nexus_bindings={}
 with zipfile.ZipFile(nexus,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as archive:
     for path in files:

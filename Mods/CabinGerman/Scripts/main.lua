@@ -43,33 +43,21 @@ local function apply(object, spec)
     local current = spec.getter and object[spec.getter](object) or object[spec.property]
     local source = current:ToString()
     local target = translation.text(source)
-    if (target or translation.is_target(source)) and not spec.hint then
-        fonts.apply(object, target or source, spec.class == "RichTextBlock")
+    if not target then
+        if translation.is_target(source) and not spec.hint then fonts.apply(object,source,spec.class=="RichTextBlock") end
+        return
     end
-    if not target then return end
     object[spec.setter](object, text(target))
     local readback = spec.getter and object[spec.getter](object) or object[spec.property]
     assert(readback:ToString() == target, "German text readback differs for " .. object:GetFullName())
+    if not spec.hint then fonts.apply(object,target,spec.class=="RichTextBlock") end
     changes = changes + 1
     if not applied[source] then
         applied[source] = true
         log("info", "translated " .. source:gsub("[\r\n]", " "):sub(1, 120))
     end
 end
-for _, spec in ipairs(specs) do
-    local path = "/Script/UMG." .. spec.class .. ":" .. spec.setter
-    attempt("hook " .. path, function()
-        RegisterHook(path, function(context, incoming)
-            if busy then return end
-            attempt("incoming " .. spec.class, function()
-                local object = context:get()
-                if not translation.allowed(object, spec.hint) then return end
-                local target = translation.text(incoming:get():ToString())
-                if target then incoming:set(text(target)) end
-            end)
-        end)
-    end)
-end
+-- Translate on the scheduled pass so other mods can read back their own SetText calls.
 assert(type(LoopInGameThreadWithDelay) == "function", "UE4SS game-thread scheduler unavailable")
 local ticks = 0
 local handle = LoopInGameThreadWithDelay(250, function()

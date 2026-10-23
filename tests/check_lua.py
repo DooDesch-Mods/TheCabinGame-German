@@ -1,6 +1,7 @@
 from pathlib import Path
 import json
 import sys
+import runpy
 root=Path(__file__).resolve().parents[1]
 vendor=root.parents[2]/'Workspace/tools/german/vendor'
 if vendor.exists(): sys.path.insert(0,str(vendor))
@@ -36,3 +37,5 @@ assert(translate.allowed(object("Hint","EditableTextBox",menu),true))
 assert(not translate.allowed(object("Label","TextBlock",object("Other","UnknownMod_C"))))
 ''')
 print(f'PASS: Lua syntax, {len(catalog)} exact translations, newline variants, numeric messages and user-text guards')
+runpy.run_path(str(root/'tests/check_ui_compatibility.py'))
+runpy.run_path(str(root/'tests/check_font_layout.py'))

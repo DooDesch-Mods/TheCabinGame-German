@@ -1,20 +1,20 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "game_build": "25553694",
   "runtime_sha256": {
-    "Content/Paks/~mods/CabinGermanVoice_P.pak": "5c19b2f1b3d2fa128b13e0359821c9edd458095b99d174447bc950b28872951e",
-    "Content/Paks/~mods/CabinGermanVoice_P.ucas": "44315695ea495a6f1d96fff2fbfe4e9a362f6fa9263a5013d74f9e48f4607688",
-    "Content/Paks/~mods/CabinGermanVoice_P.utoc": "92fb8d0024234f59657c3e110c542f1c9515ac097fedef53efc5af2b5c603e6e",
     "Mods/CabinGerman/enabled.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Mods/CabinGerman/mod-info.ini": "63127901228cc7f0cfb26359d5058a401ae3d1e35c993ff2b20d755040d382ec",
-    "Mods/CabinGerman/Scripts/de.lua": "90a5e9d4bd924d3a3df52416f01354600b7606d18151e8c482698891c1a3d26b",
-    "Mods/CabinGerman/Scripts/fonts.lua": "f201623ce971b20fbafe3a4340ea4cd45e7f7c220b393f6e1d6e05af3e7c0270",
-    "Mods/CabinGerman/Scripts/main.lua": "60ff9a8ff62df9766d30893121be3749f9f2b202ee88a80dab2443390aeddd6f",
+    "Mods/CabinGerman/mod-info.ini": "d9e303b96b5ee548f93e2ff512e1d0ac5804b82353f0483f7dd147aff34c3a6a",
+    "Mods/CabinGerman/Scripts/de.lua": "a4dc35a07b4c991add600404f9ba9db57c448bd0ac94b7dfb41403b462243390",
+    "Mods/CabinGerman/Scripts/fonts.lua": "7bf4f688cd200702e8826349b50b9de90c2a809c2f90d96ca37853e8cf9e15af",
+    "Mods/CabinGerman/Scripts/main.lua": "848896a06e7debfb3503693851148f678fef64c1c82cbc3cfd3285897b1725b1",
     "Mods/CabinGerman/Scripts/radio.lua": "f67112a9b1d02aba3e62421101058db620994e20c104ba598d6ee7f9729237ca",
     "Mods/CabinGerman/Scripts/translate.lua": "dbed42520e1006289da361bcbe2bbbcba95f40fa075b84b22db2f9583398bd82",
-    "Mods/CabinGerman/Scripts/widgets.lua": "79d02fd7bc88d50c5eaf723f121e7cb99c61acff47615b1de6872a868262063d"
+    "Mods/CabinGerman/Scripts/widgets.lua": "79d02fd7bc88d50c5eaf723f121e7cb99c61acff47615b1de6872a868262063d",
+    "Content/Paks/~mods/CabinGermanVoice_P.pak": "5c19b2f1b3d2fa128b13e0359821c9edd458095b99d174447bc950b28872951e",
+    "Content/Paks/~mods/CabinGermanVoice_P.ucas": "44315695ea495a6f1d96fff2fbfe4e9a362f6fa9263a5013d74f9e48f4607688",
+    "Content/Paks/~mods/CabinGermanVoice_P.utoc": "92fb8d0024234f59657c3e110c542f1c9515ac097fedef53efc5af2b5c603e6e"
   },
-  "scope": "Previously accepted original menu/settings/ten journal pages; actual original intro SoundCue loading/playback/end, caption text/show/hide in original HUD; visual caption preview on menu canvas",
+  "scope": "Previously accepted original menu/settings/ten journal pages; actual original intro SoundCue loading/playback/end, caption text/show/hide in original HUD; visual caption preview on menu canvas; 0.2.1 delta: actual pause/confirmation/customization views, original tab delegates and ModSettings open/close with German; board UI preview; catalog/riddle parity. Unchanged audio evidence retained.",
   "ui_runtime_accepted": true,
   "full_gameplay_accepted": false,
   "radio_subtitle_playback_accepted": true,
@@ -61,5 +61,6 @@
     "release_sha256": "5c19b2f1b3d2fa128b13e0359821c9edd458095b99d174447bc950b28872951e",
     "change": "Unique path-hash seed only; same V11 format, ../../../ mount and zero entries; audio UTOC/UCAS unchanged",
     "readback_verified": true
-  }
+  },
+  "delta_evidence": "docs/hotfix-validation.json"
 }

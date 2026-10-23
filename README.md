@@ -13,8 +13,8 @@ Spielernamen, Lobbyeinträge, Chatnachrichten, Passwörter und eingegebene Texte
 Benötigt die Steam-Version, Build `25553694`, und [UE4SS 3.0.1](https://www.nexusmods.com/thecabingame/mods/4). UE4SS separat installieren.
 
 1. Spiel schließen.
-2. Für das Nexus-Archiv `CabinGerman_0.2.0_nexus.zip`: den enthaltenen Ordner `the_cabin_game` in den Steam-Spielordner `the cabin game` kopieren. Dort liegt auch `the_cabin_game.exe`.
-3. Für das Archiv `CabinGerman-0.2.0.zip`: `Mods/CabinGerman` nach `the_cabin_game/Binaries/Win64/ue4ss/Mods/CabinGerman` und die drei Dateien aus `Content/Paks/~mods` nach `the_cabin_game/Content/Paks/~mods` kopieren.
+2. Für das Nexus-Archiv `CabinGerman_0.2.1_nexus.zip`: den enthaltenen Ordner `the_cabin_game` in den Steam-Spielordner `the cabin game` kopieren. Dort liegt auch `the_cabin_game.exe`.
+3. Für das Archiv `CabinGerman-0.2.1.zip`: `Mods/CabinGerman` nach `the_cabin_game/Binaries/Win64/ue4ss/Mods/CabinGerman` und die drei Dateien aus `Content/Paks/~mods` nach `the_cabin_game/Content/Paks/~mods` kopieren.
 4. Spiel wie gewohnt über Steam starten.
 
 Die deutsche Übersetzung ist nach dem Start aktiv. Andere Übersetzungsmods vorher deaktivieren, damit sie sich nicht gegenseitig überschreiben. Bestehende UE4SS-Dateien und Modlisten müssen nicht ersetzt werden.
@@ -37,7 +37,7 @@ Spiel schließen und `ue4ss/Mods/CabinGerman` sowie die drei Dateien `CabinGerma
 
 ## Stand dieser Fassung
 
-Version `0.2.0` übersetzt unterstützte Text-Widgets, keine fest in Bilder oder Modelle eingebrannte Schrift. Neue Texte aus späteren Spielupdates können noch Englisch erscheinen. Menüs, Einstellungen und alle zehn Handbuchseiten wurden in der Spiel-Engine geprüft. Ein vollständiger Multiplayer-Durchlauf ist nicht Teil der bisherigen Prüfung. Die Mod verändert keine Spielregeln und enthält keine Server-Komponente; Mehrspieler-Kompatibilität ist damit noch nicht vollständig nachgewiesen.
+Version `0.2.1` übersetzt unterstützte Text-Widgets, keine fest in Bilder oder Modelle eingebrannte Schrift. Neue Texte aus späteren Spielupdates können noch Englisch erscheinen. Menüs, Einstellungen und alle zehn Handbuchseiten wurden in der Spiel-Engine geprüft. Ein vollständiger Multiplayer-Durchlauf ist nicht Teil der bisherigen Prüfung. Die Mod verändert keine Spielregeln und enthält keine Server-Komponente; Mehrspieler-Kompatibilität ist damit noch nicht vollständig nachgewiesen.
 
 Der deutsche Audio-Override wurde mit dem Original-Radio-SoundCue in der Engine vollständig abgespielt. Untertiteltexte und Ein-/Ausblenden wurden geprüft; die Bildprüfung von Schrift und Position erfolgte in einer Canvas-Vorschau. Die Untertitelanzeige im Gameplay-HUD während einer vollständigen Runde ist noch nicht separat abgenommen.
 

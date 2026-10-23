@@ -1,5 +1,14 @@
 # Änderungen
 
+## [0.2.1] - 2026-10-23
+
+### Fixed
+
+- Das Rätsel der Glühbirnenfrau verwendet deutsche Reimpaare und behält die Hinweise auf Reihenfolge, Zusammenarbeit und Neustart bei Fehlern.
+- Textänderungen anderer Mods bleiben beim unmittelbaren Rücklesen erhalten. Die Übersetzung erfolgt im vorhandenen 250-ms-Durchlauf, damit CabinModSettings seine Menükarte erstellen kann.
+- Pausemenü, Bestätigungsdialog, Lobbytafeln und Charakter-Reiter passen die deutsche Schrift an ihre vorhandenen Textflächen an.
+- Texte ohne deutsche Sonderzeichen behalten die Originalschrift des Spiels.
+
 ## [0.2.0] - 2026-10-17
 
 ### Added
