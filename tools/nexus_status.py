@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     target = json.loads((ROOT / 'nexus.json').read_bytes())
+    expected_version = json.loads((ROOT / 'package.json').read_bytes())['version']
     key = os.environ.get('NEXUSMODS_API_KEY')
     if not key:
         raise RuntimeError('NEXUSMODS_API_KEY is missing')
@@ -36,12 +37,14 @@ def main():
     if len([row for row in files if str(row.get('id')) == target['file_id']]) != 1:
         raise RuntimeError('Nexus file group does not belong to this mod')
     versions = read(f"/mod-files/{target['file_id']}/versions")['versions']
-    initial = [row for row in versions if row.get('version') == target['initial_version'] and row.get('category') == 'main']
+    initial = [row for row in versions if row.get('version') == expected_version and row.get('category') == 'main']
     if len(initial) != 1 or str(initial[0].get('file', {}).get('id')) != target['file_id']:
-        raise RuntimeError('Expected exactly one initial Main version in the configured file group')
+        raise RuntimeError('Expected exactly one current Main version in the configured file group: ' + expected_version)
     report = {'mod_id': target['mod_id'], 'file_id': target['file_id'], 'page_id': target['page_id'],
               'status': parent[0].get('status'), 'initial_version_id': str(initial[0]['id']),
-              'version': initial[0]['version'], 'files_in_parent': len(files), 'write_attempted': False}
+              'version': initial[0]['version'], 'files_in_parent': len(files), 'write_attempted': False,
+              'download_flags': {key: initial[0][key] for key in ['allow_mod_manager_download', 'primary_mod_manager_download'] if key in initial[0]},
+              'dependencies': read('/mod-file-versions/' + str(initial[0]['id']) + '/dependencies/ranges')['dependency_definitions']}
     output = ROOT / 'dist/nexus-status.json'
     output.parent.mkdir(exist_ok=True)
     output.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')

@@ -11,7 +11,7 @@ parser=argparse.ArgumentParser()
 parser.add_argument('--candidate',action='store_true',help='build a local candidate without claiming runtime acceptance')
 args=parser.parse_args()
 version=metadata['version']+('-candidate' if args.candidate else '')
-files=sorted(p for folder in ['Mods','Content'] for p in (ROOT/folder).rglob('*') if p.is_file())
+files=sorted((p for folder in ['Mods','Content'] for p in (ROOT/folder).rglob('*') if p.is_file()),key=lambda p:p.relative_to(ROOT).as_posix())
 bindings={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
 if not args.candidate:
     assert metadata['version']==acceptance['version'],'version changed since runtime verification'
@@ -27,9 +27,10 @@ with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9
     documents=['README.md','LICENSE.md','CHANGELOG.md','translations.de.json','CREDITS.md','INTRO.de.txt']
     for path in files+[ROOT/name for name in documents]:
         info=zipfile.ZipInfo(path.relative_to(ROOT).as_posix(),(2026,10,17,0,0,0))
+        info.create_system=3
         info.compress_type=zipfile.ZIP_DEFLATED
         archive.writestr(info,path.read_bytes())
-    info=zipfile.ZipInfo('README.manifest.json',(2026,10,17,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED
+    info=zipfile.ZipInfo('README.manifest.json',(2026,10,17,0,0,0));info.create_system=3;info.compress_type=zipfile.ZIP_DEFLATED
     archive.writestr(info,json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 with zipfile.ZipFile(target) as archive:
     assert archive.testzip() is None,'ZIP CRC failure'
@@ -46,14 +47,14 @@ with zipfile.ZipFile(nexus,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9)
         relative=path.relative_to(ROOT).as_posix()
         destination=('the_cabin_game/Binaries/Win64/ue4ss/'+relative if relative.startswith('Mods/')
                      else 'the_cabin_game/'+relative)
-        info=zipfile.ZipInfo(destination,(2026,10,17,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED
+        info=zipfile.ZipInfo(destination,(2026,10,17,0,0,0));info.create_system=3;info.compress_type=zipfile.ZIP_DEFLATED
         archive.writestr(info,path.read_bytes())
         nexus_bindings[destination]=bindings[relative]
     for name in ['README.md','LICENSE.md','CHANGELOG.md','CREDITS.md']:
-        info=zipfile.ZipInfo(name,(2026,10,17,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED
+        info=zipfile.ZipInfo(name,(2026,10,17,0,0,0));info.create_system=3;info.compress_type=zipfile.ZIP_DEFLATED
         archive.writestr(info,(ROOT/name).read_bytes())
     nexus_manifest={**manifest,'files':nexus_bindings}
-    info=zipfile.ZipInfo('README.manifest.json',(2026,10,17,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED
+    info=zipfile.ZipInfo('README.manifest.json',(2026,10,17,0,0,0));info.create_system=3;info.compress_type=zipfile.ZIP_DEFLATED
     archive.writestr(info,json.dumps(nexus_manifest,ensure_ascii=False,indent=2)+'\n')
 with zipfile.ZipFile(nexus) as archive:
     assert archive.testzip() is None,'Nexus ZIP CRC failure'
