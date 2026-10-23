@@ -26,6 +26,10 @@ def main():
             raise RuntimeError(f'Nexus read {path}: HTTP {error.code}') from None
         except urllib.error.URLError as error:
             raise RuntimeError(f'Nexus read {path}: {str(error.reason).replace(key, "[redacted]")}') from None
+        if path.endswith('/dependencies/ranges'):
+            if not isinstance(body.get('dependency_definitions'), list):
+                raise RuntimeError(f'Nexus read {path}: missing dependency_definitions array')
+            return body
         if not isinstance(body.get('data'), dict):
             raise RuntimeError(f'Nexus read {path}: missing data object')
         return body['data']
