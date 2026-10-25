@@ -76,4 +76,4 @@ local handle = LoopInGameThreadWithDelay(250, function()
     if ticks == 20 then log("info", "startup readbacks=" .. changes) end
 end)
 assert(handle and IsValidDelayedActionHandle(handle), "German scheduler registration failed")
-log("info", "loaded 0.2.0; German catalog=" .. catalog_count .. "; game-thread interval=250ms")
+log("info", "loaded 0.2.2; German catalog=" .. catalog_count .. "; game-thread interval=250ms")

@@ -1,0 +1,393 @@
+{
+  "version": "0.2.2",
+  "game_build": "26187517",
+  "catalog_entries": 774,
+  "added_entries": 31,
+  "assets_audited": 553,
+  "unique_display_texts": 625,
+  "reviewed_unchanged_texts": {
+    "-twisted": {
+      "reason": "Author credit or signature; preserve its spelling.",
+      "paths": [
+        "Cabin_Lobby_Content/Decorations/Chalkboard/WBP_Chalkboard.json",
+        "Cabin_Lobby_Content/Decorations/Chalkboard/WBP_TempClueBoard.json"
+      ]
+    },
+    "1234asdf asdf 6789": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "MenuContent/Widgets/SessionSlot_WBP.json"
+      ]
+    },
+    "E": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/PlayerContent/Misc/WBP_Spectate.json"
+      ]
+    },
+    "Event Description Event Description Event Description pop the balloons until the golden one appears": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "CabinGameContent/BoardGameStuff/Cards/CardComponents/Card_W.json"
+      ]
+    },
+    "Halloween 2026": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "MenuContent/PlayerCustomization/Cosmetics/Cosmetics_DT.json"
+      ]
+    },
+    "KargacinArt": {
+      "reason": "Author credit or signature; preserve its spelling.",
+      "paths": [
+        "MenuContent/Widgets/WBP_Credits.json"
+      ]
+    },
+    "LAN": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "MenuContent/Widgets/HostOptions_WBP.json",
+        "MenuContent/Widgets/LobbyBrowser_WBP.json"
+      ]
+    },
+    "MB": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/Cabin_Functions.json"
+      ]
+    },
+    "MB2": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/Cabin_Functions.json"
+      ]
+    },
+    "Q": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/PlayerContent/Misc/WBP_Spectate.json"
+      ]
+    },
+    "Renan Artworks": {
+      "reason": "Author credit or signature; preserve its spelling.",
+      "paths": [
+        "MenuContent/Widgets/WBP_Credits.json"
+      ]
+    },
+    "Snowsquall Sounds": {
+      "reason": "Author credit or signature; preserve its spelling.",
+      "paths": [
+        "MenuContent/Widgets/WBP_Credits.json"
+      ]
+    },
+    "Steam": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "Cabin_Lobby_Content/Cards/LobbyPlayerCard_WBP.json"
+      ]
+    },
+    "T": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/HUD/InputInstruction_WBP.json"
+      ]
+    },
+    "Test Visitor": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "CabinGameContent/BoardGameStuff/Cards/ChanceCards/PC_TESTVisitorProgress.json"
+      ]
+    },
+    "Text Block": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "CabinGameContent/Event_BPs/Widgets/WBP_CornerWaiter.json"
+      ]
+    },
+    "Tip Text Tip TextTip TextTip TextTip TextTip TextTip TextTip TextTip TextTip TextTip TextTip Text": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "CabinGameContent/HUD/WBP_CabinTipBase.json"
+      ]
+    },
+    "Twisted Corridor": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "Cabin_Lobby_Content/Cards/LobbyPlayerCard_WBP.json"
+      ]
+    },
+    "Twisted Corridor's Lobby": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "MenuContent/Widgets/HostOptions_WBP.json",
+        "MenuContent/Widgets/SessionSlot_WBP.json"
+      ]
+    },
+    "X": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/HUD/InputInstruction_WBP.json"
+      ]
+    },
+    "Zachary Brown": {
+      "reason": "Author credit or signature; preserve its spelling.",
+      "paths": [
+        "MenuContent/Widgets/WBP_Credits.json"
+      ]
+    },
+    "aaaaabbbcccddeeff": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "MenuContent/Widgets/SessionSlot_WBP.json"
+      ]
+    },
+    "asa": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "MenuContent/Settings/WBP_OptionsSlot_SideArrow.json"
+      ]
+    },
+    "easy pz mode": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "MenuContent/Widgets/SessionSlot_WBP.json"
+      ]
+    },
+    "new title": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "Holiday_Event_Halloween/Mutant_Rat/WBP_MutantRatCollect.json"
+      ]
+    },
+    "pee pee poo poo": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "MenuContent/Widgets/SessionSlot_WBP.json"
+      ]
+    },
+    "subname": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "Cabin_Lobby_Content/Widgets/CosmeticButton_WBP.json",
+        "Cabin_Lobby_Content/Widgets/LobbyDecorButtonSlot_WBP.json",
+        "Cabin_Lobby_Content/Widgets/LobbyInteractableButton_WBP.json",
+        "Cabin_Lobby_Content/Widgets/LobbyPetButton_WBP.json",
+        "Cabin_Lobby_Content/Widgets/TrickTreatButton_WBP.json"
+      ]
+    },
+    "this is a text message. a reeaaaaalllyy long text message that \r\nshould probably be clamped": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "CabinGameContent/PlayerContent/Misc/WBP_ChatText.json"
+      ]
+    },
+    "tier4": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "MenuContent/PlayerCustomization/Player_Background/Background_DT.json"
+      ]
+    },
+    "twisted corridor's lobby": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "MenuContent/Widgets/SessionSlot_WBP.json"
+      ]
+    },
+    "x": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "Cabin_Lobby_Content/Cards/LobbyPlayerCard_WBP.json"
+      ]
+    },
+    "{Username}{Message}": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "CabinGameContent/PlayerContent/Misc/WBP_ChatText.json"
+      ]
+    },
+    "{hh}:{mm}:{ss}:{ms}": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/Cabin_GameState.json",
+        "CabinGameContent/HUD/WBP_Pause_Menu.json"
+      ]
+    }
+  },
+  "new_widgets": [
+    "WBP_GoodieBagCollect_C",
+    "WBP_MutantRatCollect_C",
+    "WBP_PC_RandomEffect_C",
+    "WBP_PC_Sacrifice_C",
+    "WBP_PC_Traitor_C"
+  ],
+  "original_entries_unchanged": 743,
+  "observed_native_translations": {
+    "\"mutated\"": "\"mutiert\"",
+    "(defective if someone is holding the \"traitor\" card)": "(Wirkt nicht, wenn jemand \"Verräter\" auf der Hand hat.)",
+    "(defective if the final clue has already been revealed)": "(Wirkt nicht, wenn der letzte Hinweis schon aufgedeckt wurde.)",
+    "-if you are experiencing save issues, please reach out in the Discord": "-Bei Problemen mit Spielständen melde dich bitte im Discord.",
+    "Find and catch the ghastly mutant rat to win special prizes!": "Finde und fange die gruselige Mutantenratte, um besondere Preise zu gewinnen!",
+    "Goodie bags will also be hidden around the cabin! Find them to earn\r\nfun tricks and treats!": "Auch in der Hütte sind Goodie-Bags versteckt! Finde sie\nfür lustige Streiche und süße Belohnungen!",
+    "Halloween Event!": "Halloween-Event!",
+    "Happy Halloween!": "Fröhliches Halloween!",
+    "Stay in the Light": "Bleib im Licht",
+    "This event will run until the 2nd week of November :)": "Das Event läuft bis zur zweiten Novemberwoche :)",
+    "for 90 seconds you must survive.\r\nstay in the light to stay alive.\r\navoid the dark and what it holds,\r\nfor new horrors are about to unfold.": "90 Sekunden musst du bestehn.\nBleib stets im Licht, um weiterzugehn.\nMeide das Dunkel, gib auf dich acht,\ndenn neues Grauen im Schatten erwacht.",
+    "good luck and thank you playing! :)": "Viel Glück und danke fürs Spielen! :)",
+    "graveyard wipe": "Friedhof leeren",
+    "lose 30 minutes on the clock": "30 Minuten auf der Uhr verlieren",
+    "move the visitor piece back 30 minutes": "Besucherfigur um 30 Minuten zurücksetzen",
+    "one of these random effects will occur:": "Einer dieser Zufallseffekte tritt ein:",
+    "prevents the final clue from appearing, but guarantees your escape.": "Verhindert den letzten Hinweis, sichert dir aber die Flucht.",
+    "random board effect": "Zufälliger Tischeffekt",
+    "rewind 30 minutes on the clock": "Die Uhr um 30 Minuten zurückdrehen",
+    "sacrifice your life at the end of the game to spare the life of another": "Opfere am Spielende dein Leben, um einen anderen Spieler zu retten.",
+    "the sacrifice": "Das Opfer",
+    "the traitor": "Der Verräter",
+    "this card will only activate if left in your hand by the end of the game. Otherwise it plays as a normal progress card.": "Wirkt nur, wenn du sie am Spielende noch auf der Hand hast. Ausgespielt zählt sie als normale Zeitkarte."
+  },
+  "views": {
+    "traitor": {
+      "evidence": "Workspace\\evidence\\german\\halloween-26187517\\traitor.json",
+      "png": "analysis\\runtime\\german-halloween-26187517\\cabin-menu-window-f58c6e4dfc66451eb44b0adfb36d87b9.png",
+      "sha256": "61140132d7005c3adc40df539e6408aad595a5eb2e02c7fc175ba71af4ee9ea9"
+    },
+    "random_effect": {
+      "evidence": "Workspace\\evidence\\german\\halloween-26187517\\random_effect.json",
+      "png": "analysis\\runtime\\german-halloween-26187517\\cabin-menu-window-83a2513a295243948f2f15995ecc4461.png",
+      "sha256": "de5b67758063d1116c2970d43b5f0f5a8bd4f7809b3c4236bbdb54395c6adf70"
+    },
+    "stay_light": {
+      "evidence": "Workspace\\evidence\\german\\halloween-26187517\\stay_light.json",
+      "png": "analysis\\runtime\\german-halloween-26187517\\cabin-menu-window-0dc2b3dc3f634a4b9d658c6d0a62584c.png",
+      "sha256": "efae524f668c284e0bcc5d9a14cb32bea875c8134a6133e2aea7e5207beced68"
+    },
+    "halloween_board": {
+      "evidence": "Workspace\\evidence\\german\\halloween-26187517\\halloween_board.json",
+      "png": "analysis\\runtime\\german-halloween-26187517\\cabin-menu-window-7dd4186b843c4e37916bea98b52f75f9.png",
+      "sha256": "d0ac2fa0dbbb2b5b0a341073222f9067ef03ff0cde4d8bcf6b1a07dea350825e"
+    },
+    "welcome_board": {
+      "evidence": "Workspace\\evidence\\german\\halloween-26187517\\welcome_board.json",
+      "png": "analysis\\runtime\\german-halloween-26187517\\cabin-menu-window-413c19c97bcb43d6b8833cdc34a1f18e.png",
+      "sha256": "8f24ee97b5f6b301164fa6d90b0efee6d26ac65dcd5947089df98d8f0377e913"
+    },
+    "mutant_rat": {
+      "evidence": "Workspace\\evidence\\german\\halloween-26187517\\mutant_rat.json",
+      "png": "analysis\\runtime\\german-halloween-26187517\\cabin-menu-window-0f1a1f974b0b46a893b4cb0e5efc19ee.png",
+      "sha256": "b91acf94406637ff1c489885103d301137c7aa769b46d30a51a9a1e40cdfda32"
+    },
+    "goodie_bag": {
+      "evidence": "Workspace\\evidence\\german\\halloween-26187517\\goodie_bag.json",
+      "png": "analysis\\runtime\\german-halloween-26187517\\cabin-menu-window-ece5b60007dd4f9d99351ec71badbde3.png",
+      "sha256": "930a1450fe58d300bfd721cc8793c5167456800e1f6f0373a6eab0d8f7b47f70"
+    },
+    "settings": {
+      "evidence": "Workspace\\evidence\\german\\halloween-26187517\\settings.json",
+      "png": "analysis\\runtime\\german-halloween-26187517\\cabin-menu-window-adb2f6b0579145518c50b5be1d47b057.png",
+      "sha256": "6da82039ffc4aab177cb49d1364b7d1afdfcb4072e0779ad50aaf15fd6837c11"
+    }
+  },
+  "tests": {
+    "lua_catalog_and_behavior": "passed",
+    "unit_tests": 5,
+    "unit_tests_passed": true,
+    "corrected_environment_failure": "One Nexus-status test could not write sandbox temp files; passed with a workspace-owned temporary directory."
+  },
+  "limitations": [
+    "Private original-widget previews and text readbacks; no full Halloween multiplayer round.",
+    "Menu decorations overlap parts of the preview images. Card background/world appearance was not fully validated.",
+    "Reward collection animation and item unlock flow were not played; the new reward widget text was read back.",
+    "Audio and previous typography behavior retain their unchanged earlier evidence."
+  ],
+  "unchanged_runtime_files": [
+    "Mods/CabinGerman/enabled.txt",
+    "Mods/CabinGerman/Scripts/fonts.lua",
+    "Mods/CabinGerman/Scripts/radio.lua",
+    "Mods/CabinGerman/Scripts/translate.lua",
+    "Content/Paks/~mods/CabinGermanVoice_P.pak",
+    "Content/Paks/~mods/CabinGermanVoice_P.ucas",
+    "Content/Paks/~mods/CabinGermanVoice_P.utoc"
+  ],
+  "previous_acceptance": {
+    "version": "0.2.1",
+    "game_build": "25553694",
+    "runtime_sha256": {
+      "Mods/CabinGerman/enabled.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "Mods/CabinGerman/mod-info.ini": "d9e303b96b5ee548f93e2ff512e1d0ac5804b82353f0483f7dd147aff34c3a6a",
+      "Mods/CabinGerman/Scripts/de.lua": "a4dc35a07b4c991add600404f9ba9db57c448bd0ac94b7dfb41403b462243390",
+      "Mods/CabinGerman/Scripts/fonts.lua": "7bf4f688cd200702e8826349b50b9de90c2a809c2f90d96ca37853e8cf9e15af",
+      "Mods/CabinGerman/Scripts/main.lua": "848896a06e7debfb3503693851148f678fef64c1c82cbc3cfd3285897b1725b1",
+      "Mods/CabinGerman/Scripts/radio.lua": "f67112a9b1d02aba3e62421101058db620994e20c104ba598d6ee7f9729237ca",
+      "Mods/CabinGerman/Scripts/translate.lua": "dbed42520e1006289da361bcbe2bbbcba95f40fa075b84b22db2f9583398bd82",
+      "Mods/CabinGerman/Scripts/widgets.lua": "79d02fd7bc88d50c5eaf723f121e7cb99c61acff47615b1de6872a868262063d",
+      "Content/Paks/~mods/CabinGermanVoice_P.pak": "5c19b2f1b3d2fa128b13e0359821c9edd458095b99d174447bc950b28872951e",
+      "Content/Paks/~mods/CabinGermanVoice_P.ucas": "44315695ea495a6f1d96fff2fbfe4e9a362f6fa9263a5013d74f9e48f4607688",
+      "Content/Paks/~mods/CabinGermanVoice_P.utoc": "92fb8d0024234f59657c3e110c542f1c9515ac097fedef53efc5af2b5c603e6e"
+    },
+    "scope": "Previously accepted original menu/settings/ten journal pages; actual original intro SoundCue loading/playback/end, caption text/show/hide in original HUD; visual caption preview on menu canvas; 0.2.1 delta: actual pause/confirmation/customization views, original tab delegates and ModSettings open/close with German; board UI preview; catalog/riddle parity. Unchanged audio evidence retained.",
+    "ui_runtime_accepted": true,
+    "full_gameplay_accepted": false,
+    "radio_subtitle_playback_accepted": true,
+    "views": {
+      "settings": {
+        "evidence": "Workspace\\evidence\\german\\line-fit-views\\settings.json",
+        "png": "analysis\\runtime\\german-translation137\\cabin-menu-window-3aba355b264a4f9b930c0bd7de88d9f9.png",
+        "sha256": "d8bf6f0995a93140b8b15b91180d5e76bccbd8dbc672ff63c26b4bef17ce0511"
+      },
+      "howto": {
+        "evidence": "Workspace\\evidence\\german\\line-fit-views\\howto.json",
+        "png": "analysis\\runtime\\german-translation137\\cabin-menu-window-42f7ed17eada4d8cb5a4b0bbcce58bf8.png",
+        "sha256": "22cf124b145f5c551745723f07c33cc820f4ee0189d9101ce114725613f9ee6f"
+      },
+      "clues": {
+        "evidence": "Workspace\\evidence\\german\\line-fit-views\\clues.json",
+        "png": "analysis\\runtime\\german-translation137\\cabin-menu-window-bc84374c199b4152b1f3bfd86f994ff9.png",
+        "sha256": "63b9d7209d28666a84e4b1b13b534dbdaf0df85d99d7e40183b498b08e27cccb"
+      },
+      "types": {
+        "evidence": "Workspace\\evidence\\german\\line-fit-views\\types.json",
+        "png": "analysis\\runtime\\german-translation137\\cabin-menu-window-a3701f00d2f945199903195e4d2da420.png",
+        "sha256": "3f2db8f1e8887acb47f7d834ad73bb1e98e188b5919b3bfeccfd6206b494446c"
+      },
+      "stealth": {
+        "evidence": "Workspace\\evidence\\german\\final-views\\stealth.json",
+        "png": "analysis\\runtime\\german-translation137\\cabin-menu-window-c703e151ed704a74ba95002ea2f9d59a.png",
+        "sha256": "db4d8295bb8bca237d9ad70035004695a281b4d38ef1bb14f244284e339534ac"
+      },
+      "manual": {
+        "evidence": "Workspace\\evidence\\german\\final-views\\manual.json",
+        "png": "analysis\\runtime\\german-translation137\\cabin-menu-window-0003e4d2d9fe4bb08f9ee4e6e8335d70.png",
+        "sha256": "29eb8efd6e7f5ce88dcb0b9554e62a0797127bbcd56a8d53ff68c67ccacafd91"
+      }
+    },
+    "voice_poc_included": false,
+    "note": "Full multiplayer round and actual gameplay-HUD layout remain unmeasured. The original gameplay HUD has zero layout size in the menu-only test, so visual font/position acceptance uses the same caption on the menu canvas. New German audio only; no original voice or encoder is shipped.",
+    "audio_runtime_accepted": true,
+    "radio_gameplay_layout_accepted": false,
+    "german_voice_included": true,
+    "audio_evidence": "Workspace/evidence/german/release-0.2.0",
+    "companion_pak_metadata": {
+      "tested_sha256": "75e7144577253917f6da7312ef5e585b12fb728226a22b0938323751a6b555cd",
+      "release_sha256": "5c19b2f1b3d2fa128b13e0359821c9edd458095b99d174447bc950b28872951e",
+      "change": "Unique path-hash seed only; same V11 format, ../../../ mount and zero entries; audio UTOC/UCAS unchanged",
+      "readback_verified": true
+    },
+    "delta_evidence": "docs/hotfix-validation.json"
+  },
+  "runtime_files": {
+    "Mods/CabinGerman/enabled.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Mods/CabinGerman/mod-info.ini": "49df657da353cde4439155382641a8dfee082cf2aa1e3fc326e36efe6e24a35e",
+    "Mods/CabinGerman/Scripts/de.lua": "70ef9262f0eb51c779bb21282bd613b46565df36ee2d13700677669233267dcf",
+    "Mods/CabinGerman/Scripts/fonts.lua": "7bf4f688cd200702e8826349b50b9de90c2a809c2f90d96ca37853e8cf9e15af",
+    "Mods/CabinGerman/Scripts/main.lua": "13968307bc0370e9205856a024b7956d2731925c5a8a91e48fb58fe168bcf7ac",
+    "Mods/CabinGerman/Scripts/radio.lua": "f67112a9b1d02aba3e62421101058db620994e20c104ba598d6ee7f9729237ca",
+    "Mods/CabinGerman/Scripts/translate.lua": "dbed42520e1006289da361bcbe2bbbcba95f40fa075b84b22db2f9583398bd82",
+    "Mods/CabinGerman/Scripts/widgets.lua": "8f53382ba9aa3e7064f18ad63e71681b750f223adf3eabe9161a93cd10993d9c",
+    "Content/Paks/~mods/CabinGermanVoice_P.pak": "5c19b2f1b3d2fa128b13e0359821c9edd458095b99d174447bc950b28872951e",
+    "Content/Paks/~mods/CabinGermanVoice_P.ucas": "44315695ea495a6f1d96fff2fbfe4e9a362f6fa9263a5013d74f9e48f4607688",
+    "Content/Paks/~mods/CabinGermanVoice_P.utoc": "92fb8d0024234f59657c3e110c542f1c9515ac097fedef53efc5af2b5c603e6e"
+  },
+  "original_game_writes": 0,
+  "user_save_writes": 0
+}

@@ -1,20 +1,20 @@
 {
-  "version": "0.2.1",
-  "game_build": "25553694",
+  "version": "0.2.2",
+  "game_build": "26187517",
   "runtime_sha256": {
     "Mods/CabinGerman/enabled.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Mods/CabinGerman/mod-info.ini": "d9e303b96b5ee548f93e2ff512e1d0ac5804b82353f0483f7dd147aff34c3a6a",
-    "Mods/CabinGerman/Scripts/de.lua": "a4dc35a07b4c991add600404f9ba9db57c448bd0ac94b7dfb41403b462243390",
+    "Mods/CabinGerman/mod-info.ini": "49df657da353cde4439155382641a8dfee082cf2aa1e3fc326e36efe6e24a35e",
+    "Mods/CabinGerman/Scripts/de.lua": "70ef9262f0eb51c779bb21282bd613b46565df36ee2d13700677669233267dcf",
     "Mods/CabinGerman/Scripts/fonts.lua": "7bf4f688cd200702e8826349b50b9de90c2a809c2f90d96ca37853e8cf9e15af",
-    "Mods/CabinGerman/Scripts/main.lua": "848896a06e7debfb3503693851148f678fef64c1c82cbc3cfd3285897b1725b1",
+    "Mods/CabinGerman/Scripts/main.lua": "13968307bc0370e9205856a024b7956d2731925c5a8a91e48fb58fe168bcf7ac",
     "Mods/CabinGerman/Scripts/radio.lua": "f67112a9b1d02aba3e62421101058db620994e20c104ba598d6ee7f9729237ca",
     "Mods/CabinGerman/Scripts/translate.lua": "dbed42520e1006289da361bcbe2bbbcba95f40fa075b84b22db2f9583398bd82",
-    "Mods/CabinGerman/Scripts/widgets.lua": "79d02fd7bc88d50c5eaf723f121e7cb99c61acff47615b1de6872a868262063d",
+    "Mods/CabinGerman/Scripts/widgets.lua": "8f53382ba9aa3e7064f18ad63e71681b750f223adf3eabe9161a93cd10993d9c",
     "Content/Paks/~mods/CabinGermanVoice_P.pak": "5c19b2f1b3d2fa128b13e0359821c9edd458095b99d174447bc950b28872951e",
     "Content/Paks/~mods/CabinGermanVoice_P.ucas": "44315695ea495a6f1d96fff2fbfe4e9a362f6fa9263a5013d74f9e48f4607688",
     "Content/Paks/~mods/CabinGermanVoice_P.utoc": "92fb8d0024234f59657c3e110c542f1c9515ac097fedef53efc5af2b5c603e6e"
   },
-  "scope": "Previously accepted original menu/settings/ten journal pages; actual original intro SoundCue loading/playback/end, caption text/show/hide in original HUD; visual caption preview on menu canvas; 0.2.1 delta: actual pause/confirmation/customization views, original tab delegates and ModSettings open/close with German; board UI preview; catalog/riddle parity. Unchanged audio evidence retained.",
+  "scope": "Previously accepted original menu/settings/ten journal pages; actual original intro SoundCue loading/playback/end, caption text/show/hide in original HUD; visual caption preview on menu canvas; 0.2.1 delta: actual pause/confirmation/customization views, original tab delegates and ModSettings open/close with German; board UI preview; catalog/riddle parity. Unchanged audio evidence retained.; 0.2.2 delta: current-build original-widget text readbacks for Halloween cards, boards and reward widgets. Preview-image limitations and unchanged audio evidence are documented in docs/halloween-validation.json.",
   "ui_runtime_accepted": true,
   "full_gameplay_accepted": false,
   "radio_subtitle_playback_accepted": true,
@@ -62,5 +62,5 @@
     "change": "Unique path-hash seed only; same V11 format, ../../../ mount and zero entries; audio UTOC/UCAS unchanged",
     "readback_verified": true
   },
-  "delta_evidence": "docs/hotfix-validation.json"
+  "delta_evidence": "docs/halloween-validation.json"
 }

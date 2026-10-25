@@ -1,0 +1,341 @@
+{
+  "game_build": "26187517",
+  "catalog_entries": 774,
+  "added": {
+    "\"mutated\"": "\"mutiert\"",
+    "(defective if someone is holding the \"traitor\" card)": "(Wirkt nicht, wenn jemand \"Verräter\" auf der Hand hat.)",
+    "(defective if the final clue has already been revealed)": "(Wirkt nicht, wenn der letzte Hinweis schon aufgedeckt wurde.)",
+    "-if you are experiencing save issues, please reach out in the Discord": "-Bei Problemen mit Spielständen melde dich bitte im Discord.",
+    "Buttons the Bruiser": "Buttons der Prügler",
+    "Find and catch the ghastly mutant rat to win special prizes!": "Finde und fange die gruselige Mutantenratte, um besondere Preise zu gewinnen!",
+    "Goodie bags will also be hidden around the cabin! Find them to earn\r\nfun tricks and treats!": "Auch in der Hütte sind Goodie-Bags versteckt! Finde sie\nfür lustige Streiche und süße Belohnungen!",
+    "Halloween Event!": "Halloween-Event!",
+    "Happy Halloween!": "Fröhliches Halloween!",
+    "Random Turn": "Zufälliger Zug",
+    "Stay in the Light": "Bleib im Licht",
+    "Stay in the light and avoid the dark until time expires!": "Bleib im Licht und meide die Dunkelheit, bis die Zeit abgelaufen ist!",
+    "This event will run until the 2nd week of November :)": "Das Event läuft bis zur zweiten Novemberwoche :)",
+    "clam": "Muschel",
+    "cleaver": "Fleischerbeil",
+    "discord": "Discord",
+    "for 90 seconds you must survive.\r\nstay in the light to stay alive.\r\navoid the dark and what it holds,\r\nfor new horrors are about to unfold.": "90 Sekunden musst du bestehn.\nBleib stets im Licht, um weiterzugehn.\nMeide das Dunkel, gib auf dich acht,\ndenn neues Grauen im Schatten erwacht.",
+    "good luck and thank you playing! :)": "Viel Glück und danke fürs Spielen! :)",
+    "graveyard wipe": "Friedhof leeren",
+    "grimly goblin": "Grimmiger Goblin",
+    "lose 30 minutes on the clock": "30 Minuten auf der Uhr verlieren",
+    "move the visitor piece back 30 minutes": "Besucherfigur um 30 Minuten zurücksetzen",
+    "one of these random effects will occur:": "Einer dieser Zufallseffekte tritt ein:",
+    "prevents the final clue from appearing, but guarantees your escape.": "Verhindert den letzten Hinweis, sichert dir aber die Flucht.",
+    "random board effect": "Zufälliger Tischeffekt",
+    "rewind 30 minutes on the clock": "Die Uhr um 30 Minuten zurückdrehen",
+    "sacrifice your life at the end of the game to spare the life of another": "Opfere am Spielende dein Leben, um einen anderen Spieler zu retten.",
+    "the next turn will be a random player": "Als Nächstes ist ein zufälliger Spieler am Zug",
+    "the sacrifice": "Das Opfer",
+    "the traitor": "Der Verräter",
+    "this card will only activate if left in your hand by the end of the game. Otherwise it plays as a normal progress card.": "Wirkt nur, wenn du sie am Spielende noch auf der Hand hast. Ausgespielt zählt sie als normale Zeitkarte."
+  },
+  "source_paths": {
+    "\"mutated\"": [
+      "Holiday_Event_Halloween/Mutant_Rat/WBP_MutantRatCollect.json"
+    ],
+    "(defective if someone is holding the \"traitor\" card)": [
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_Sacrifice.json"
+    ],
+    "(defective if the final clue has already been revealed)": [
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_Traitor.json"
+    ],
+    "-if you are experiencing save issues, please reach out in the Discord": [
+      "Cabin_Lobby_Content/Decorations/Chalkboard/WBP_Chalkboard.json"
+    ],
+    "Buttons the Bruiser": [
+      "MenuContent/PlayerCustomization/Cosmetics/Cosmetics_DT.json"
+    ],
+    "Find and catch the ghastly mutant rat to win special prizes!": [
+      "Cabin_Lobby_Content/Decorations/Chalkboard/WBP_TempClueBoard.json"
+    ],
+    "Goodie bags will also be hidden around the cabin! Find them to earn\r\nfun tricks and treats!": [
+      "Cabin_Lobby_Content/Decorations/Chalkboard/WBP_TempClueBoard.json"
+    ],
+    "Halloween Event!": [
+      "Cabin_Lobby_Content/Decorations/Chalkboard/WBP_TempClueBoard.json"
+    ],
+    "Happy Halloween!": [
+      "Cabin_Lobby_Content/Decorations/Chalkboard/WBP_Chalkboard.json"
+    ],
+    "Random Turn": [
+      "CabinGameContent/BoardGameStuff/Cards/ChanceCards/PC_RandomTurn.json"
+    ],
+    "Stay in the Light": [
+      "CabinGameContent/BoardGameStuff/Cards/EventCards/EC_StayInLight.json"
+    ],
+    "Stay in the light and avoid the dark until time expires!": [
+      "CabinGameContent/BoardGameStuff/Cards/EventCards/EC_StayInLight.json"
+    ],
+    "This event will run until the 2nd week of November :)": [
+      "Cabin_Lobby_Content/Decorations/Chalkboard/WBP_TempClueBoard.json"
+    ],
+    "clam": [
+      "MenuContent/PlayerCustomization/Cosmetics/Cosmetics_DT.json"
+    ],
+    "cleaver": [
+      "MenuContent/PlayerCustomization/Cosmetics/Cosmetics_DT.json"
+    ],
+    "discord": [
+      "MenuContent/3DMenuCards/MenuCardSocial_W.json"
+    ],
+    "for 90 seconds you must survive.\r\nstay in the light to stay alive.\r\navoid the dark and what it holds,\r\nfor new horrors are about to unfold.": [
+      "CabinGameContent/BoardGameStuff/Cards/EventCards/EC_StayInLight.json"
+    ],
+    "good luck and thank you playing! :)": [
+      "Cabin_Lobby_Content/Decorations/Chalkboard/WBP_Chalkboard.json"
+    ],
+    "graveyard wipe": [
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_RandomEffect.json"
+    ],
+    "grimly goblin": [
+      "MenuContent/PlayerCustomization/Cosmetics/Cosmetics_DT.json"
+    ],
+    "lose 30 minutes on the clock": [
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_RandomEffect.json"
+    ],
+    "move the visitor piece back 30 minutes": [
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_RandomEffect.json"
+    ],
+    "one of these random effects will occur:": [
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_RandomEffect.json"
+    ],
+    "prevents the final clue from appearing, but guarantees your escape.": [
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_Traitor.json"
+    ],
+    "random board effect": [
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_RandomEffect.json"
+    ],
+    "rewind 30 minutes on the clock": [
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_RandomEffect.json"
+    ],
+    "sacrifice your life at the end of the game to spare the life of another": [
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_Sacrifice.json"
+    ],
+    "the next turn will be a random player": [
+      "CabinGameContent/BoardGameStuff/Cards/ChanceCards/PC_RandomTurn.json"
+    ],
+    "the sacrifice": [
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_Sacrifice.json"
+    ],
+    "the traitor": [
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_Traitor.json"
+    ],
+    "this card will only activate if left in your hand by the end of the game. Otherwise it plays as a normal progress card.": [
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_Sacrifice.json",
+      "CabinGameContent/BoardGameStuff/Cards/CardComponents/SpecialCardWidgets/WBP_PC_Traitor.json"
+    ]
+  },
+  "reviewed_untranslated": {
+    "-twisted": {
+      "reason": "Author credit or signature; preserve its spelling.",
+      "paths": [
+        "Cabin_Lobby_Content/Decorations/Chalkboard/WBP_Chalkboard.json",
+        "Cabin_Lobby_Content/Decorations/Chalkboard/WBP_TempClueBoard.json"
+      ]
+    },
+    "1234asdf asdf 6789": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "MenuContent/Widgets/SessionSlot_WBP.json"
+      ]
+    },
+    "E": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/PlayerContent/Misc/WBP_Spectate.json"
+      ]
+    },
+    "Event Description Event Description Event Description pop the balloons until the golden one appears": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "CabinGameContent/BoardGameStuff/Cards/CardComponents/Card_W.json"
+      ]
+    },
+    "Halloween 2026": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "MenuContent/PlayerCustomization/Cosmetics/Cosmetics_DT.json"
+      ]
+    },
+    "KargacinArt": {
+      "reason": "Author credit or signature; preserve its spelling.",
+      "paths": [
+        "MenuContent/Widgets/WBP_Credits.json"
+      ]
+    },
+    "LAN": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "MenuContent/Widgets/HostOptions_WBP.json",
+        "MenuContent/Widgets/LobbyBrowser_WBP.json"
+      ]
+    },
+    "MB": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/Cabin_Functions.json"
+      ]
+    },
+    "MB2": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/Cabin_Functions.json"
+      ]
+    },
+    "Q": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/PlayerContent/Misc/WBP_Spectate.json"
+      ]
+    },
+    "Renan Artworks": {
+      "reason": "Author credit or signature; preserve its spelling.",
+      "paths": [
+        "MenuContent/Widgets/WBP_Credits.json"
+      ]
+    },
+    "Snowsquall Sounds": {
+      "reason": "Author credit or signature; preserve its spelling.",
+      "paths": [
+        "MenuContent/Widgets/WBP_Credits.json"
+      ]
+    },
+    "Steam": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "Cabin_Lobby_Content/Cards/LobbyPlayerCard_WBP.json"
+      ]
+    },
+    "T": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/HUD/InputInstruction_WBP.json"
+      ]
+    },
+    "Test Visitor": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "CabinGameContent/BoardGameStuff/Cards/ChanceCards/PC_TESTVisitorProgress.json"
+      ]
+    },
+    "Text Block": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "CabinGameContent/Event_BPs/Widgets/WBP_CornerWaiter.json"
+      ]
+    },
+    "Tip Text Tip TextTip TextTip TextTip TextTip TextTip TextTip TextTip TextTip TextTip TextTip Text": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "CabinGameContent/HUD/WBP_CabinTipBase.json"
+      ]
+    },
+    "Twisted Corridor": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "Cabin_Lobby_Content/Cards/LobbyPlayerCard_WBP.json"
+      ]
+    },
+    "Twisted Corridor's Lobby": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "MenuContent/Widgets/HostOptions_WBP.json",
+        "MenuContent/Widgets/SessionSlot_WBP.json"
+      ]
+    },
+    "X": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/HUD/InputInstruction_WBP.json"
+      ]
+    },
+    "Zachary Brown": {
+      "reason": "Author credit or signature; preserve its spelling.",
+      "paths": [
+        "MenuContent/Widgets/WBP_Credits.json"
+      ]
+    },
+    "aaaaabbbcccddeeff": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "MenuContent/Widgets/SessionSlot_WBP.json"
+      ]
+    },
+    "asa": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "MenuContent/Settings/WBP_OptionsSlot_SideArrow.json"
+      ]
+    },
+    "easy pz mode": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "MenuContent/Widgets/SessionSlot_WBP.json"
+      ]
+    },
+    "new title": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "Holiday_Event_Halloween/Mutant_Rat/WBP_MutantRatCollect.json"
+      ]
+    },
+    "pee pee poo poo": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "MenuContent/Widgets/SessionSlot_WBP.json"
+      ]
+    },
+    "subname": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "Cabin_Lobby_Content/Widgets/CosmeticButton_WBP.json",
+        "Cabin_Lobby_Content/Widgets/LobbyDecorButtonSlot_WBP.json",
+        "Cabin_Lobby_Content/Widgets/LobbyInteractableButton_WBP.json",
+        "Cabin_Lobby_Content/Widgets/LobbyPetButton_WBP.json",
+        "Cabin_Lobby_Content/Widgets/TrickTreatButton_WBP.json"
+      ]
+    },
+    "this is a text message. a reeaaaaalllyy long text message that \r\nshould probably be clamped": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "CabinGameContent/PlayerContent/Misc/WBP_ChatText.json"
+      ]
+    },
+    "tier4": {
+      "reason": "Developer/default placeholder overwritten by the original game.",
+      "paths": [
+        "MenuContent/PlayerCustomization/Player_Background/Background_DT.json"
+      ]
+    },
+    "twisted corridor's lobby": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "MenuContent/Widgets/SessionSlot_WBP.json"
+      ]
+    },
+    "x": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "Cabin_Lobby_Content/Cards/LobbyPlayerCard_WBP.json"
+      ]
+    },
+    "{Username}{Message}": {
+      "reason": "Player/session/chat example or formatting field; user text stays protected.",
+      "paths": [
+        "CabinGameContent/PlayerContent/Misc/WBP_ChatText.json"
+      ]
+    },
+    "{hh}:{mm}:{ss}:{ms}": {
+      "reason": "Unchanged key binding, platform name or formatting token.",
+      "paths": [
+        "CabinGameContent/Cabin_GameState.json",
+        "CabinGameContent/HUD/WBP_Pause_Menu.json"
+      ]
+    }
+  }
+}

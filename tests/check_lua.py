@@ -17,6 +17,8 @@ for source,target in catalog.items():
     expected=target if target!=source else None
     assert vm.globals().translate.text(source)==expected,(source,target)
     assert vm.globals().translate.text(source.replace('\r\n','\n'))==expected
+for source,target in json.loads((root/'halloween.de.json').read_text(encoding='utf-8')).items():
+    assert catalog[source]==target, ('Halloween source catalog differs',source)
 assert vm.globals().translate.text('Deaths: 12')=='Tode: 12'
 assert vm.globals().translate.text('Level: 27') is None
 assert vm.globals().translate.text('Time: 12:04.5')=='Zeit: 12:04.5'
@@ -35,6 +37,11 @@ assert(not translate.allowed(object("Name_T","TextBlock",object("Slot","SessionS
 assert(not translate.allowed(object("Name_T","TextBlock",object("Slot","LobbyPlayerCard_WBP_C"))))
 assert(translate.allowed(object("Hint","EditableTextBox",menu),true))
 assert(not translate.allowed(object("Label","TextBlock",object("Other","UnknownMod_C"))))
+for _,class in ipairs({"WBP_PC_Sacrifice_C","WBP_PC_Traitor_C","WBP_PC_RandomEffect_C","WBP_MutantRatCollect_C","WBP_GoodieBagCollect_C"}) do
+ local owner=object("Halloween",class)
+ assert(translate.allowed(object("Label","TextBlock",owner)),"Halloween widget not recognized: "..class)
+ assert(not translate.allowed(object("PlayerName_T","TextBlock",owner)),"Halloween player name guard missing")
+end
 ''')
 print(f'PASS: Lua syntax, {len(catalog)} exact translations, newline variants, numeric messages and user-text guards')
 runpy.run_path(str(root/'tests/check_ui_compatibility.py'))

@@ -1,5 +1,18 @@
 # Änderungen
 
+## [0.2.2] - 2026-10-25
+
+### Added
+
+- 31 Übersetzungen für den Halloween-Build 26187517, darunter neue Glückskarten, Eventtexte, Tafeln und Kosmetik.
+- Deutsche Reimpaare für das neue Event „Bleib im Licht“.
+- Unterstützung für fünf neue Karten- und Belohnungs-Widgets.
+
+### Fixed
+
+- Neue Kartentexte werden auch in ihren eigenen Widget-Klassen übersetzt.
+- Die Startmeldung zeigt die tatsächliche Mod-Version an.
+
 ## [0.2.1] - 2026-10-23
 
 ### Fixed
