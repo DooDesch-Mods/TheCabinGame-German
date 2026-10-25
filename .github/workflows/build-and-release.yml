@@ -112,3 +112,36 @@ jobs:
           update_mod_version: true
           primary_mod_manager_download: ${{ vars.NEXUS_VORTEX_READY == 'true' }}
           allow_mod_manager_download: ${{ vars.NEXUS_VORTEX_READY == 'true' }}
+
+  discord:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: [build, github, nexus]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.13'
+      - name: Check announcement routing
+        run: python tests/test_discord.py
+      - name: Announce the release in Discord
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: v${{ needs.build.outputs.version }}
+          SEND_ANNOUNCEMENT: 'true'
+          DISCORD_RELEASE_WEBHOOK: ${{ secrets.DISCORD_RELEASE_WEBHOOK }}
+          DISCORD_CHANNEL_ID: '1534536549642014810'
+          PRODUCT_NAME: CabinGerman
+          PRODUCT_SUMMARY: German text and radio intro for the cabin game.
+          PRODUCT_SUPPORT: https://support.doodesch.de/german
+          NEXUS_MOD_URL: https://www.nexusmods.com/thecabingame/mods/13
+          PRODUCT_THUMBNAIL: https://raw.githubusercontent.com/DooDesch-Mods/TheCabinGame-German/main/docs/thumbnail.png
+        run: python tools/announce-release.py
+      - name: Keep Discord acknowledgement
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: discord-announcement-${{ github.run_id }}
+          path: discord-result.json
+          if-no-files-found: warn
