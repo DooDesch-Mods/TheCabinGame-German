@@ -1,0 +1,14 @@
+{
+  "version": "0.2.3",
+  "game_build": "26187517",
+  "scope": "Original pause and Neighbor widget previews, vanilla font retention, missing-glyph fallback and font/style/size recovery; unchanged audio/catalog acceptance retained.",
+  "evidence_sha256": "31c4b0543bc0e6728bc1571b34a37d6c81d74843763baedd6943db90701cef4b",
+  "tested_runtime_sha256": "caf0191641207b05edf8983f72627006b1a9a272380b8b7b531041669416fc58",
+  "metadata_only_delta": [
+    "mod-info.ini version",
+    "main.lua startup version"
+  ],
+  "physical_pointer_tested": false,
+  "full_multiplayer_tested": false,
+  "audio_payload_unchanged": true
+}

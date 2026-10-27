@@ -53,7 +53,7 @@ function FindAllOf(class) return objects[class] or {} end
 local library={IsValid=function() return true end,Conv_StringToText=function(_,value) return FText(value) end}
 function StaticFindObject(path) assert(path=="/Script/Engine.Default__KismetTextLibrary");return library end
 -- Font and radio rendering are unchanged; isolate their engine-dependent work.
-package.loaded.fonts={apply=function() end}
+package.loaded.fonts={apply=function() end,begin_pass=function()end,end_pass=function()end,has_layout=function()return false end}
 package.loaded.radio={tick=function() end}
 assert(loadfile(entrypoint))()
 local label=widget("TextBlock","Single_T","Play")

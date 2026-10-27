@@ -44,7 +44,9 @@ local function apply(object, spec)
     local source = current:ToString()
     local target = translation.text(source)
     if not target then
-        if translation.is_target(source) and not spec.hint then fonts.apply(object,source,spec.class=="RichTextBlock") end
+        if not spec.hint and (translation.is_target(source) or fonts.has_layout(object)) then
+            fonts.apply(object,source,spec.class=="RichTextBlock")
+        end
         return
     end
     object[spec.setter](object, text(target))
@@ -63,6 +65,7 @@ local ticks = 0
 local handle = LoopInGameThreadWithDelay(250, function()
     if busy then return end
     busy = true
+    fonts.begin_pass()
     for _, spec in ipairs(specs) do
         attempt("scan " .. spec.class, function()
             for _, object in ipairs(FindAllOf(spec.class) or {}) do
@@ -70,10 +73,11 @@ local handle = LoopInGameThreadWithDelay(250, function()
             end
         end)
     end
+    fonts.end_pass()
     busy = false
     attempt("radio subtitles", radio.tick)
     ticks = ticks + 1
     if ticks == 20 then log("info", "startup readbacks=" .. changes) end
 end)
 assert(handle and IsValidDelayedActionHandle(handle), "German scheduler registration failed")
-log("info", "loaded 0.2.2; German catalog=" .. catalog_count .. "; game-thread interval=250ms")
+log("info", "loaded 0.2.3; German catalog=" .. catalog_count .. "; game-thread interval=250ms")

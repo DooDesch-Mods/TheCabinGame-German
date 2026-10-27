@@ -1,5 +1,14 @@
 # Änderungen
 
+## [0.2.3] - 2026-10-27
+
+### Fixed
+
+- ESC-Labels und Bestätigungsdialog stimmen mit ihren vorhandenen Schaltflächen überein.
+- Die Nachbar-Schrift bleibt auch während der Textanimation auf die Dialogfläche begrenzt.
+- Deutsche Texte behalten die jeweilige Vanilla-Schrift und ihren Schriftschnitt, wenn alle Zeichen vorhanden sind, auch im ESC-Menü und beim Nachbarn.
+- Die Ersatzschrift wird nur bei fehlenden Zeichen verwendet. Ein späterer passender Text erhält wieder die ursprüngliche Schrift mit angepasster Größe.
+
 ## [0.2.2] - 2026-10-25
 
 ### Added
