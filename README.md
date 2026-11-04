@@ -2,6 +2,8 @@
 
 > 🛟 **Need help or found a bug?** Get support at [support.doodesch.de/german](https://support.doodesch.de/german).
 
+[![Discord](https://mods.doodesch.de/img/badge.svg)](https://mods.doodesch.de)
+
 Deutsche Texte und ein deutsch gesprochenes Radiointro für the cabin game. Übersetzt Menüs, Einstellungen, Karten, Hinweise, Spielhandbuch und Shop. Mit Begriffen wie Charakter, Level, XP und Goodie-Bag. Der Katalog enthält 774 Einträge und zusätzliche Regeln für Meldungen mit Zahlen.
 
 ![CabinGerman - deutsche Texte und deutsches Intro](https://raw.githubusercontent.com/DooDesch-Mods/TheCabinGame-German/main/docs/img/header.jpg)
@@ -58,3 +60,9 @@ Prüfung: `python tests/check_lua.py` mit `lupa`. Paketbau: `python tools/packag
 Danke an das UE4SS-Projekt. Das vom Nutzer bereitgestellte spanische Übersetzungspaket 0.1.14 diente als Referenz für Textabdeckung und Spiel-Widgetnamen; dessen Code und spanische Texte sind nicht Bestandteil dieses Mods.
 
 Die deutsche Sprachaufnahme wurde lokal mit [Qwen3-TTS 1.7B Base](https://github.com/QwenLM/Qwen3-TTS) erzeugt. Die Originalaufnahme diente als Stimmreferenz; der deutsche Text wurde separat überarbeitet. Es wird kein Qwen-Modell mitgeliefert. Die ursprüngliche Stimme und das Spiel stammen vom jeweiligen Rechteinhaber. Lizenz und weitere Hinweise stehen in `CREDITS.md`.
+
+## Community
+
+[![DooDesch Mods on Discord](https://mods.doodesch.de/img/card.svg)](https://mods.doodesch.de)
+
+Join the DooDesch Mods Discord: update pings, polls on what comes next, and playtests of new mods.
